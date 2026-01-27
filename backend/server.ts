@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 
-import { connectDB } from "./database/connect.ts";
+import { connectDB } from "./src/database/connect.ts";
 import { app } from "./app.ts";
 
 dotenv.config();
@@ -11,7 +11,7 @@ async function bootstrap() {
   await connectDB();
 
   app.listen(PORT, () => {
-    console.log(`⚙️ Server running on port ${PORT}`);
+    console.log(`⚙️  Server running on port ${PORT}`);
   });
 }
 
