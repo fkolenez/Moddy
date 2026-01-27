@@ -2,18 +2,11 @@ import { WorkoutHeatmap } from "@/components/Heatmap";
 import MetricCard from "@/components/MetricCard";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { SidebarTrigger } from "@/components/ui/sidebar";
-
-// Treinos reais:
-// Data: 01-01-2026
-// Categoria: Cardio
-// Descrição: Treino de bike 20km
-
-// Data: 03-01-2026
-// Categoria: Cardio
-// Descrição: Treino de bike 25km
-
+import { useWorkoutStats } from "@/hooks/use-workout-stats";
 
 export function Drilling() {
+    const { count, loading, error } = useWorkoutStats();
+
     return (
         <>
             <div className="relative mb-4">
@@ -32,7 +25,11 @@ export function Drilling() {
 
                 <MetricCard
                     title="Treinos no ano"
-                    value="42 / 150"
+                    value={
+                        loading ? "Carregando..." 
+                        : error ? "Erro ao carregar" 
+                        : `${count} / 150`
+                    }
                     subtitle="Meta anual"
                 />
             </div>

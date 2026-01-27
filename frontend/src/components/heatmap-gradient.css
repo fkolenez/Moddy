@@ -1,15 +1,19 @@
 .color-empty {
   fill: #e5e7eb;
 }
+
 .color-scale-1 {
   fill: #444444;
 }
+
 .color-scale-2 {
   fill: #222222;
 }
+
 .color-scale-3 {
   fill: #111111;
 }
+
 .color-scale-4 {
   fill: #000000;
 }
