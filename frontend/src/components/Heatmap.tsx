@@ -1,5 +1,6 @@
 import CalendarHeatmap from "react-calendar-heatmap";
 import "react-calendar-heatmap/dist/styles.css";
+import { useNavigate } from "react-router-dom";
 
 type WorkoutDay = {
     date: string; // yyyy-mm-dd
@@ -11,6 +12,8 @@ type Props = {
 };
 
 export function WorkoutHeatmap({ data }: Props) {
+    const navigate = useNavigate();
+
     const startDate = new Date(new Date().getFullYear(), 0, 1);
     const endDate = new Date(new Date().getFullYear(), 11, 31);
 
@@ -29,6 +32,10 @@ export function WorkoutHeatmap({ data }: Props) {
                 if (value.count === 2) return "color-scale-2";
                 if (value.count === 3) return "color-scale-3";
                 return "color-scale-4"; 
+            }}
+            onClick={(value: any) => {
+                if (!value?.date) return;
+                navigate(`/workouts/${value.date}`);
             }}
             tooltipDataAttrs={(value: ValueType) => {
                 if (!value || !value.date) return {};

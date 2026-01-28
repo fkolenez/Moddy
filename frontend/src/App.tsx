@@ -3,6 +3,7 @@ import { Layout } from "@/components/Layout";
 import { Homepage } from "./pages/Homepage";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { Drilling } from "./pages/Drilling";
+import { WorkoutDayPage } from "./pages/WorkoutDay";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<Homepage />} />
             <Route path="/drilling" element={ <Drilling />} />
+            <Route path="/workouts/:date" element={<WorkoutDayPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

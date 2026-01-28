@@ -17,3 +17,7 @@
 .color-scale-4 {
   fill: #000000;
 }
+
+.react-calendar-heatmap rect {
+  cursor: pointer;
+}
