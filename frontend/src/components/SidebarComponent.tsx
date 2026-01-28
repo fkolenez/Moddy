@@ -54,7 +54,6 @@ export function SidebarComponent() {
         </h2>
       </SidebarHeader>
 
-      {/* CONTENT */}
       <SidebarContent className="bg-sidebar-DEFAULT text-sidebar-foreground">
         <SidebarGroup>
           <SidebarGroupContent>
@@ -82,7 +81,6 @@ export function SidebarComponent() {
         </SidebarGroup>
       </SidebarContent>
 
-      {/* FOOTER */}
       <SidebarFooter className="border-t bg-sidebar-DEFAULT text-sidebar-foreground">
         <SidebarMenu>
           <SidebarMenuItem>

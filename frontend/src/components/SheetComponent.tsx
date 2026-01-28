@@ -85,11 +85,7 @@ export function SheetComponent({
           {children}
 
           <div ref={endRef} />
-
-          {/* ZONA DE PERIGO */}
-
-
-
+          
           <Separator />
 
           <div className="rounded-md border border-destructive/30 bg-destructive/5 p-4">

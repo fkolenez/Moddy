@@ -21,7 +21,7 @@ export function WorkoutHeatmap({ data }: Props) {
             startDate={startDate}
             endDate={endDate}
             values={data}
-            showWeekdayLabels={true}
+            showWeekdayLabels={false}
             weekdayLabels={["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"]}
             classForValue={(value: ValueType) => {
                 if (!value) return "color-empty";

@@ -110,6 +110,29 @@
   fill: hsl(var(--muted-foreground));
 }
 
+.react-calendar-heatmap .react-calendar-heatmap-weekday-labels {
+  font-size: 10px;
+}
+
+.react-calendar-heatmap .react-calendar-heatmap-weekday-labels text {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Customização dos blocos do heatmap */
+.react-calendar-heatmap rect {
+  width: 10px !important;
+  height: 10px !important;
+  rx: 1px !important;
+  ry: 1px !important;
+}
+
+/* Ajustar espaçamento entre os blocos */
+.react-calendar-heatmap .react-calendar-heatmap-small-text {
+  font-size: 9px;
+}
+
 .color-empty {
   fill: #e5e7eb;
 }
