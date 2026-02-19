@@ -1,5 +1,6 @@
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { SidebarComponent } from "./SidebarComponent";
+import { Toaster } from "@/components/ui/sonner";
 import { Outlet } from "react-router-dom";
 
 export function Layout() {
@@ -10,6 +11,7 @@ export function Layout() {
         <main className="flex-1 p-4">
           <Outlet />
         </main>
+        <Toaster position="top-right" />
       </SidebarProvider>
     </div>
   );

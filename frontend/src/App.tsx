@@ -4,6 +4,7 @@ import { Homepage } from "./pages/Homepage";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { Drilling } from "./pages/Drilling";
 import { WorkoutDayPage } from "./pages/WorkoutDay";
+import { Gallery } from "./pages/Gallery";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Route path="/" element={<Homepage />} />
             <Route path="/drilling" element={ <Drilling />} />
             <Route path="/workouts/:date" element={<WorkoutDayPage />} />
+            <Route path="/gallery" element={<Gallery />}/>
           </Route>
         </Routes>
       </BrowserRouter>

@@ -22,6 +22,7 @@ import {
   Settings,
   Home,
   Dumbbell,
+  Camera,
 } from "lucide-react"
 
 import { Link, useLocation } from "react-router-dom"
@@ -58,7 +59,7 @@ export function SidebarComponent() {
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
-              <SidebarMenuItem className="mb-5">
+              <SidebarMenuItem>
                 <Link to="/">
                   <SidebarMenuButton isActive={pathname === "/"}>
                     <Home className="h-5 w-5" />
@@ -66,13 +67,35 @@ export function SidebarComponent() {
                   </SidebarMenuButton>
                 </Link>
               </SidebarMenuItem>
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
 
+        <SidebarGroup>
           <SidebarGroupLabel>Rotina</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
               <SidebarMenuItem>
                 <Link to="/drilling">
                   <SidebarMenuButton isActive={pathname === "/drilling"}>
                     <Dumbbell className="h-5 w-5" />
                     <span>Treinos</span>
+                  </SidebarMenuButton>
+                </Link>
+              </SidebarMenuItem>
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        <SidebarGroup>
+          <SidebarGroupLabel>Galeria</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <Link to="/gallery">
+                  <SidebarMenuButton isActive={pathname === "/gallery"}>
+                    <Camera className="h-5 w-5" />
+                    <span>Nossas fotos</span>
                   </SidebarMenuButton>
                 </Link>
               </SidebarMenuItem>
